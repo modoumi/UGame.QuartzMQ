@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>cf289db1-8e0e-4a71-a508-0ab9c66bc78d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TinyFx.BIZ.DataSplit.JOB" Version="3.17.54" />
+    <PackageReference Include="TinyFx.Data.MySql" Version="3.17.54" />
+    <PackageReference Include="TinyFx.Data.SqlSugar" Version="3.17.54" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="tinyfx\sat\" />
+  </ItemGroup>
+
+</Project>

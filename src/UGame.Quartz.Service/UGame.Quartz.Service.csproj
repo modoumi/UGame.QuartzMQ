@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_BankFeeJob.cs" />
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_BetUserJob.cs" />
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_CurrencyChangeJob.cs" />
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_GGRJob.cs" />
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_NewUsersJob.cs" />
+		<Compile Remove="Services\SReport\OperDayWorker\SrOperDay_RetationRateJob.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="TinyFx.BIZ.DataSplit.JOB" Version="3.17.54" />
+		<PackageReference Include="Xxyy.Banks.JOB" Version="1.2.40" />
+		<PackageReference Include="Xxyy.Common" Version="1.4.166" />
+		<PackageReference Include="Xxyy.DataMove" Version="1.4.131" />
+		<PackageReference Include="Xxyy.MQ" Version="1.4.163" />
+		<PackageReference Include="Xxyy.Sharding" Version="1.4.125" />
+		<PackageReference Include="Xxyy.SMS" Version="1.4.124" />	
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UGame.Quartz.Repository\UGame.Quartz.Repository.csproj" />
+	</ItemGroup>
+
+</Project>

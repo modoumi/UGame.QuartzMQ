@@ -1,0 +1,91 @@
+{
+  "DockerPublish": {
+    "DefaultConfig": "dev",
+    "Configs": [
+      {
+        "Name": "dev",
+        "Desc": "开发环境121",
+        "BuildMode": 0,
+        "DockerfilePath": "",
+        "ServerIp": "192.168.1.121",
+        "Port": "22",
+        "Username": "root",
+        "Password": "Ing*zhixin@2022",
+        "IsSsh": false,
+        "ServerPath": "/root/hosts/xxyy.quartz",
+        "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+        "ImgLocalPath": "images",
+        "ImgServerPath": "/root/hosts/Xxyy.Quartz.WebAPI/images",
+        "Containers": [
+          {
+            "Name": "xxyy.quartz",
+            "PortString": "-p 9004:80",
+            "EnvString": "-e DOTNET_ENVIRONMENT=dev",
+            "LimitCoreFile": true,
+            "ServerPath": "",
+            "IsDefault": true,
+            "ServerType": null,
+            "IsHost": false,
+            "IsAspNet": false
+          }
+        ]
+      },
+      {
+        "Name": "fat",
+        "Desc": "测试环境128",
+        "BuildMode": 0,
+        "DockerfilePath": "",
+        "ServerIp": "192.168.1.128",
+        "Port": "22",
+        "Username": "root",
+        "Password": "Ing*zhixin@2022",
+        "IsSsh": false,
+        "ServerPath": "/root/hosts/Xxyy.Quartz.WebAPI/upload",
+        "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+        "ImgLocalPath": "",
+        "ImgServerPath": "",
+        "Containers": [
+          {
+            "Name": "xxyy.quartz",
+            "PortString": "-p 9004:80",
+            "EnvString": "-e DOTNET_ENVIRONMENT=fat",
+            "LimitCoreFile": true,
+            "ServerPath": "",
+            "IsDefault": true,
+            "ServerType": null,
+            "IsHost": false,
+            "IsAspNet": false
+          }
+        ]
+      },
+      {
+        "Name": "uat",
+        "Desc": "UAT环境129",
+        "BuildMode": 0,
+        "DockerfilePath": "",
+        "ServerIp": "192.168.1.129",
+        "Port": "22",
+        "Username": "root",
+        "Password": "root",
+        "IsSsh": false,
+        "ServerPath": "/root/hosts/Xxyy.Quartz.WebAPI/upload",
+        "ImageName": "mcr.microsoft.com/dotnet/aspnet:6.0",
+        "ImgLocalPath": "",
+        "ImgServerPath": "",
+        "Containers": [
+          {
+            "Name": "xxyy.quartz",
+            "PortString": "-p 9004:80",
+            "EnvString": "-e DOTNET_ENVIRONMENT=uat",
+            "LimitCoreFile": true,
+            "ServerPath": "",
+            "IsDefault": true,
+            "ServerType": null,
+            "IsHost": false,
+            "IsAspNet": false
+          }
+        ]
+      }
+    ]
+  }
+}
